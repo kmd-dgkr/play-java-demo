@@ -7,3 +7,13 @@ GET     /                           controllers.HomeController.index
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /fancy                      controllers.HelloController.doSomethingFancy()
+
+GET     /fancy/:name                controllers.HelloController.helloUser(name: String)
+
+POST    /fancyWithDetails           controllers.HelloController.helloUserWithDetails()
+
+POST    /user                       controllers.HelloController.userValidation()
+
+GET     /count                      controllers.CountController.getCurrentCount()
